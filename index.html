@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shine Point Car Wash | Hand Wash, Foam Wash &amp; Interior Detailing</title>
+<meta name="description" content="Shine Point Car Wash offers fast hand wash, foam wash, interior detailing and waxing at honest, fixed prices. Open daily 9am-9pm.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --marine:#073B4C;
+    --marine-deep:#052A36;
+    --teal:#06A77D;
+    --amber:#F2A93B;
+    --paper:#F7FAF9;
+    --ink:#0E2429;
+    --mute:#4C6266;
+    --line:#DCE6E3;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    font-size:16px;
+  }
+
+  h1,h2,h3,.brand,.amount,.big-num{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.1;
+    letter-spacing:-0.01em;
+  }
+
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  ul{list-style:none;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:absolute; top:0; left:0; right:0; z-index:50;
+    padding:28px 0;
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between;}
+  .brand{font-size:1.4rem; color:var(--paper); font-weight:600;}
+  .brand em{color:var(--amber); font-style:italic;}
+  .nav-links{display:flex; gap:34px; font-size:0.92rem; color:#DCEBE7;}
+  .nav-links a{text-decoration:none; padding-bottom:3px; border-bottom:1px solid transparent;}
+  .nav-links a:hover{border-color:var(--amber);}
+  .nav-cta{
+    background:var(--amber); color:var(--marine-deep); text-decoration:none;
+    padding:10px 22px; font-weight:600; font-size:0.88rem; border-radius:2px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--marine);
+    color:var(--paper);
+    padding:150px 0 130px;
+    overflow:hidden;
+    clip-path:polygon(0 0,100% 0,100% 92%,75% 100%,50% 93%,25% 100%,0 92%);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(ellipse at 78% 30%, rgba(6,167,125,0.35), transparent 55%);
+  }
+  .hero-grid{
+    position:relative;
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
+  }
+  .hero-eyebrow{
+    font-size:0.85rem; letter-spacing:0.03em; color:var(--amber); font-weight:600;
+    margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:3.1rem; max-width:520px; margin-bottom:22px;
+  }
+  .hero h1 em{font-style:italic; color:#8FE3CC; font-weight:500;}
+  .hero p{max-width:440px; color:#C9DEDA; font-size:1.05rem; margin-bottom:32px;}
+  .hero-actions{display:flex; gap:16px; align-items:center;}
+  .btn-primary{
+    background:var(--amber); color:var(--marine-deep); text-decoration:none;
+    padding:15px 28px; border-radius:2px; font-weight:600; font-size:0.95rem;
+  }
+  .btn-ghost{
+    color:var(--paper); text-decoration:none; font-weight:600; font-size:0.95rem;
+    border-bottom:1px solid rgba(247,250,249,0.5); padding-bottom:4px;
+  }
+  .hero-photo{
+    position:relative;
+  }
+  .hero-photo img{
+    width:100%; height:460px; object-fit:cover; border-radius:3px;
+  }
+  .hero-photo .tag{
+    position:absolute; bottom:-22px; left:-22px;
+    background:var(--paper); color:var(--marine); padding:16px 20px; border-radius:2px;
+    box-shadow:0 12px 30px rgba(5,42,54,0.25);
+    font-size:0.85rem; max-width:190px;
+  }
+  .hero-photo .tag b{display:block; font-family:'Fraunces',serif; font-size:1.5rem; font-weight:600;}
+
+  /* ---------- Trust strip ---------- */
+  .trust{margin-top:-8px; padding-bottom:70px;}
+  .trust ul{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;
+    font-size:0.86rem; color:var(--mute); font-weight:500;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:20px 0;
+  }
+  .trust ul li::before{content:"— "; color:var(--teal);}
+
+  /* ---------- Section basics ---------- */
+  section{padding:96px 0;}
+  .section-head{max-width:600px; margin-bottom:56px;}
+  .kicker{color:var(--teal); font-weight:600; font-size:0.85rem; margin-bottom:10px; letter-spacing:0.02em;}
+  .section-head h2{font-size:2.2rem; color:var(--marine);}
+  .section-head .desc{margin-top:14px; color:var(--mute); font-size:1.02rem;}
+
+  /* ---------- Services (editorial rows, not cards) ---------- */
+  .service-row{
+    display:grid; grid-template-columns:70px 1fr 1.3fr; gap:36px; align-items:center;
+    padding:30px 0; border-top:1px solid var(--line);
+  }
+  .services-list .service-row:last-child{border-bottom:1px solid var(--line);}
+  .service-row .big-num{font-size:1.6rem; color:var(--teal);}
+  .service-row h3{font-size:1.35rem; color:var(--ink); font-weight:600;}
+  .service-row p{color:var(--mute); font-size:0.96rem; max-width:420px;}
+  .service-row .thumb{
+    width:100%; height:110px; object-fit:cover; border-radius:3px;
+    justify-self:end; max-width:220px;
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery-strip{background:var(--marine); color:var(--paper);}
+  .gallery-strip .kicker{color:var(--amber);}
+  .gallery-strip .section-head h2{color:var(--paper);}
+  .gallery-strip .desc{color:#B9CFCB;}
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    grid-template-rows:190px 190px;
+    gap:16px;
+  }
+  .gallery-grid img{width:100%; height:100%; object-fit:cover; border-radius:3px; filter:saturate(1.05);}
+  .g1{grid-row:1 / span 2;}
+
+  /* ---------- Pricing (rate card table, not identical boxes) ---------- */
+  .rate-card{
+    border:1px solid var(--line); border-radius:3px; overflow:hidden;
+  }
+  .rate-row{
+    display:grid; grid-template-columns:2fr repeat(3, 1fr);
+    border-top:1px solid var(--line);
+  }
+  .rate-row:first-child{border-top:none;}
+  .rate-row > div{padding:18px 22px; font-size:0.92rem;}
+  .rate-row.head{background:var(--marine); color:var(--paper); font-family:'Fraunces',serif; font-weight:600;}
+  .rate-row.head > div:nth-child(3){background:rgba(255,255,255,0.06);}
+  .rate-row:not(.head) > div:nth-child(3){background:#EEF6F3; font-weight:600;}
+  .rate-row:not(.head) > div:first-child{color:var(--ink); font-weight:500;}
+  .rate-row:not(.head) > div:not(:first-child){color:var(--mute); text-align:center;}
+  .rate-row.price-row > div{
+    font-family:'Fraunces',serif; font-size:1.3rem; color:var(--marine); text-align:center; font-weight:600;
+  }
+  .rate-row.price-row > div:first-child{text-align:left; font-family:'Inter',sans-serif; font-size:0.85rem; color:var(--mute); font-weight:600;}
+  .rate-foot{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:20px 22px; background:var(--paper); flex-wrap:wrap; gap:14px;
+  }
+  .rate-foot span{font-size:0.88rem; color:var(--mute);}
+
+  /* ---------- Testimonials ---------- */
+  .quotes{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .quote{border-left:2px solid var(--teal); padding-left:24px;}
+  .quote p{font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; color:var(--ink); margin-bottom:14px;}
+  .quote span{font-size:0.85rem; color:var(--mute); font-weight:600;}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  .contact-list li{padding:18px 0; border-top:1px solid var(--line); font-size:0.96rem;}
+  .contact-list li:first-child{border-top:none;}
+  .contact-list b{display:block; color:var(--teal); font-size:0.78rem; letter-spacing:0.03em; text-transform:uppercase; margin-bottom:4px;}
+  form label{display:block; font-size:0.82rem; font-weight:600; margin-bottom:6px; color:var(--marine); margin-top:18px;}
+  form label:first-child{margin-top:0;}
+  form input, form select{
+    width:100%; padding:10px 2px; border:none; border-bottom:1px solid var(--line);
+    background:transparent; font-family:inherit; font-size:0.98rem; color:var(--ink);
+  }
+  form input:focus, form select:focus{outline:none; border-bottom-color:var(--teal);}
+  form button{
+    margin-top:30px; padding:14px 30px; border:none; border-radius:2px;
+    background:var(--marine); color:var(--paper); font-weight:600; cursor:pointer; font-size:0.95rem;
+  }
+
+  footer{background:var(--marine-deep); color:#9FB6B1; padding:34px 0; font-size:0.85rem;}
+  .footer-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+  .footer-row a{text-decoration:none; color:#9FB6B1;}
+
+  @media (max-width:880px){
+    header{position:static; background:var(--marine); padding:20px 0;}
+    .hero{padding-top:40px;}
+    .nav-links{display:none;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-photo{order:-1;}
+    .hero h1{font-size:2.3rem;}
+    .trust ul{flex-direction:column;}
+    .service-row{grid-template-columns:40px 1fr; grid-template-areas:"num title" "num desc"; }
+    .service-row .thumb{display:none;}
+    .gallery-grid{grid-template-columns:1fr 1fr; grid-template-rows:140px 140px 140px;}
+    .g1{grid-row:auto; grid-column:1 / span 2; height:180px;}
+    .rate-row{grid-template-columns:1.5fr repeat(3,1fr); font-size:0.78rem;}
+    .rate-row > div{padding:12px 10px;}
+    .quotes{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Shine<em>Point</em></div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Book a wash</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-eyebrow">LAHORE'S NEIGHBOURHOOD CAR WASH</p>
+      <h1>A properly clean car, <em>not a rushed one.</em></h1>
+      <p>Hand wash, foam wash and interior detailing done by people who check the corners. No shortcuts, no upselling — just a clean car and a fair price.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#pricing">See pricing</a>
+        <a class="btn-ghost" href="#contact">Book a slot →</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://loremflickr.com/700/600/carwash?lock=11" alt="Car being hand washed with foam at Shine Point Car Wash">
+      <div class="tag"><b>500+</b>cars washed every month</div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap trust">
+  <ul>
+    <li>Foam &amp; microfiber — no scratches</li>
+    <li>Interior + exterior in one visit</li>
+    <li>Fixed, upfront pricing</li>
+    <li>Open daily, 9am – 9pm</li>
+  </ul>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">SERVICES</p>
+      <h2>Pick what your car needs</h2>
+      <p class="desc">From a quick rinse before work to a full interior refresh before a trip — four services cover most of what people ask for.</p>
+    </div>
+    <div class="services-list">
+      <div class="service-row">
+        <div class="big-num">01</div>
+        <div>
+          <h3>Basic Wash</h3>
+          <p>Exterior shampoo, rinse and hand dry. Good for a weekly clean-up.</p>
+        </div>
+        <img class="thumb" src="https://loremflickr.com/440/220/car-wash-water?lock=31" alt="Exterior car wash rinse">
+      </div>
+      <div class="service-row">
+        <div class="big-num">02</div>
+        <div>
+          <h3>Foam Wash</h3>
+          <p>A thick foam soak lifts dirt before hand washing — gentler on the paint.</p>
+        </div>
+        <img class="thumb" src="https://loremflickr.com/440/220/carwash?lock=32" alt="Car covered in thick foam wash">
+      </div>
+      <div class="service-row">
+        <div class="big-num">03</div>
+        <div>
+          <h3>Interior Detailing</h3>
+          <p>Vacuum, seat and dash cleaning, mats washed, glass polished inside.</p>
+        </div>
+        <img class="thumb" src="https://loremflickr.com/440/220/car-interior?lock=33" alt="Car interior being vacuumed and cleaned">
+      </div>
+      <div class="service-row">
+        <div class="big-num">04</div>
+        <div>
+          <h3>Wax &amp; Polish</h3>
+          <p>Restores shine and adds a protective layer that helps dust slide off.</p>
+        </div>
+        <img class="thumb" src="https://loremflickr.com/440/220/car-polish?lock=34" alt="Car being polished and waxed">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-strip" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">GALLERY</p>
+      <h2>A look at the work</h2>
+    </div>
+    <div class="gallery-grid">
+      <img class="g1" src="https://loremflickr.com/700/760/carwash?lock=21" alt="Worker foam washing a car exterior">
+      <img src="https://loremflickr.com/500/380/car-detailing?lock=22" alt="Close-up of car exterior detailing">
+      <img src="https://loremflickr.com/500/380/car-interior?lock=23" alt="Car interior being cleaned">
+      <img src="https://loremflickr.com/500/380/car-polish?lock=24" alt="Car being polished and waxed">
+      <img src="https://loremflickr.com/500/380/car-wash-water?lock=25" alt="Car exterior rinsed with water">
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">PRICING</p>
+      <h2>Simple, fixed rates</h2>
+      <p class="desc">One price per service, no hidden add-ons. Sedan pricing shown — SUVs and vans add a small fee, confirmed before we start.</p>
+    </div>
+    <div class="rate-card">
+      <div class="rate-row head">
+        <div>What's included</div>
+        <div style="text-align:center">Basic</div>
+        <div style="text-align:center">Foam + Interior</div>
+        <div style="text-align:center">Full Detail</div>
+      </div>
+      <div class="rate-row">
+        <div>Exterior shampoo &amp; rinse</div>
+        <div>✓</div><div>✓</div><div>✓</div>
+      </div>
+      <div class="rate-row">
+        <div>Foam soak &amp; hand wash</div>
+        <div>—</div><div>✓</div><div>✓</div>
+      </div>
+      <div class="rate-row">
+        <div>Full interior vacuum &amp; wipe-down</div>
+        <div>—</div><div>✓</div><div>✓</div>
+      </div>
+      <div class="rate-row">
+        <div>Wax, polish &amp; leather conditioning</div>
+        <div>—</div><div>—</div><div>✓</div>
+      </div>
+      <div class="rate-row price-row">
+        <div>Price (sedan)</div>
+        <div>Rs 500</div><div>Rs 1,200</div><div>Rs 2,500</div>
+      </div>
+    </div>
+    <div class="rate-foot">
+      <span>SUV / van: +Rs 300 &nbsp;·&nbsp; Estimated time: 20–60 min depending on service</span>
+      <a class="btn-primary" href="#contact">Book a slot</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">FROM CUSTOMERS</p>
+      <h2>What people say after</h2>
+    </div>
+    <div class="quotes">
+      <div class="quote">
+        <p>"They actually clean under the mats and around the door edges. First wash that's felt properly done."</p>
+        <span>— Ahmed R., regular customer</span>
+      </div>
+      <div class="quote">
+        <p>"In and out in half an hour before work, and the price never changes from what they quote."</p>
+        <span>— Sana K., regular customer</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:#EFF6F4;">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="section-head">
+        <p class="kicker">VISIT OR CALL</p>
+        <h2>Come by, or book ahead</h2>
+      </div>
+      <ul class="contact-list">
+        <li><b>Address</b>Main Boulevard, near Liberty Roundabout, Lahore</li>
+        <li><b>Phone</b>0300 1234567</li>
+        <li><b>Hours</b>Every day, 9:00 AM – 9:00 PM</li>
+      </ul>
+    </div>
+    <form>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Your name">
+      <label for="phone">Phone</label>
+      <input id="phone" type="tel" placeholder="03XX XXXXXXX">
+      <label for="service">Service</label>
+      <select id="service">
+        <option>Basic Wash</option>
+        <option>Foam + Interior</option>
+        <option>Full Detail</option>
+      </select>
+      <label for="time">Preferred time</label>
+      <input id="time" type="text" placeholder="e.g. Today, 5pm">
+      <button type="submit">Request booking</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 Shine Point Car Wash, Lahore</span>
+    <a href="#contact">Get directions</a>
+  </div>
+</footer>
+
+</body>
+</html>
