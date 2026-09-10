@@ -935,7 +935,7 @@
           </div>
           <div class="contact-item">
             <h4>Phone / WhatsApp</h4>
-            <p>+92 300 1234567</p>
+            <p>+92 303 5767651</p>
           </div>
           <div class="contact-item">
             <h4>Working Hours</h4>
@@ -944,7 +944,7 @@
         </div>
 
         <div style="margin-top: 36px;">
-          <a href="https://wa.me/923001234567" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
+          <a href="https://wa.me/923035767651" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
         </div>
       </div>
     </div>
@@ -994,6 +994,37 @@
       </form>
     </div>
   </div>
+  <!-- Modal: Booking Form -->
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('bookingModal')">&times;</button>
+      <h3 style="margin-bottom: 20px; font-size: 1.25rem;">Book Detailing Service</h3>
+      <form onsubmit="sendToWhatsApp(event)">
+        <div class="form-group">
+          <label>Customer Name</label>
+          <input type="text" id="custName" placeholder="Your Full Name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" id="custPhone" placeholder="03001234567" required>
+        </div>
+        <div class="form-group">
+          <label>Select Service</label>
+          <select id="custService" style="width:100%; padding:12px; background:rgba(255,255,255,0.05); border:1px solid var(--border-light); border-radius:8px; color:white;">
+            <option value="Standard Wash (Rs 500)" style="color:black;">Standard Wash - Rs 500</option>
+            <option value="Executive Detailing (Rs 1,200)" style="color:black;">Executive Detailing - Rs 1,200</option>
+            <option value="Showroom Restoration (Rs 2,500)" style="color:black;">Showroom Restoration - Rs 2,500</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Date & Time</label>
+          <input type="text" id="custTime" placeholder="e.g. Tomorrow at 3 PM" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Send via WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
 
   <!-- Application Logic -->
   <script>
@@ -1073,6 +1104,25 @@
       renderArticles();
       closeModal('articleModal');
       e.target.reset();
+    }
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const service = document.getElementById('custService').value;
+      const time = document.getElementById('custTime').value;
+      
+      // Enter your WhatsApp number here with country code (92)
+      const myNumber = "923001234567"; 
+      
+      const message = `*New Car Wash Booking Request*%0A%0A` +
+                      `*Name:* ${encodeURIComponent(name)}%0A` +
+                      `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                      `*Service:* ${encodeURIComponent(service)}%0A` +
+                      `*Preferred Time:* ${encodeURIComponent(time)}`;
+                      
+      window.open(`https://wa.me/${myNumber}?text=${message}`, '_blank');
     }
 
     function openModal(id) { document.getElementById(id).classList.add('active'); }
