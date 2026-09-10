@@ -4,21 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Meta Tags -->
-<title>Shine Point Car Wash | Hand Wash, Foam Wash &amp; Interior Detailing Lahore</title>
-<meta name="description" content="Shine Point Car Wash offers fast hand wash, foam wash, interior detailing and waxing at honest, fixed prices in Lahore. Open daily 9am-9pm.">
-<meta name="keywords" content="car wash lahore, auto detailing, foam wash, interior car cleaning, shine point, car wax lahore">
-<link rel="canonical" href="https://shinepoint.pk/">
-
-<!-- Open Graph / Social Media Meta -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shine Point Car Wash | Professional Detailing Lahore">
-<meta property="og:description" content="A properly clean car, not a rushed one. Hand wash, foam wash & detailing with fixed upfront pricing.">
-<meta property="og:image" content="https://loremflickr.com/700/600/carwash?lock=11">
+<title>Shine Point Car Wash | Lahore</title>
+<meta name="description" content="Shine Point Car Wash offers fast hand wash, foam wash, interior detailing and waxing at honest prices in Lahore.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -31,6 +22,7 @@
     --mute:#4C6266;
     --line:#DCE6E3;
     --white:#FFFFFF;
+    --danger:#E63946;
   }
 
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -44,306 +36,152 @@
     font-size:16px;
   }
 
-  h1,h2,h3,.brand,.amount,.big-num{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    line-height:1.15;
-    letter-spacing:-0.01em;
+  h1,h2,h3,.brand{
+    font-weight:700;
+    line-height:1.2;
   }
 
-  img{max-width:100%; display:block;}
-  a{color:inherit;}
+  a{color:inherit; text-decoration:none;}
   ul{list-style:none;}
-  .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 20px;}
 
   /* Header */
   header{
-    position:absolute; top:0; left:0; right:0; z-index:50;
-    padding:28px 0;
+    background:var(--marine);
+    padding:18px 0;
+    position:sticky; top:0; z-index:50;
   }
   .nav{display:flex; align-items:center; justify-content:space-between;}
-  .brand{font-size:1.4rem; color:var(--paper); font-weight:600;}
-  .brand em{color:var(--amber); font-style:italic;}
-  .nav-links{display:flex; gap:28px; font-size:0.92rem; color:#DCEBE7; align-items:center;}
-  .nav-links a{text-decoration:none; padding-bottom:3px; border-bottom:1px solid transparent; transition:0.2s;}
-  .nav-links a:hover{border-color:var(--amber); color:var(--white);}
+  .brand{font-size:1.3rem; color:var(--paper);}
+  .brand em{color:var(--amber); font-style:normal;}
+  .nav-links{display:flex; gap:20px; font-size:0.9rem; color:#DCEBE7;}
+  .nav-links a:hover{color:var(--amber);}
   .nav-cta{
-    background:var(--amber); color:var(--marine-deep); text-decoration:none;
-    padding:10px 22px; font-weight:600; font-size:0.88rem; border-radius:2px;
-    transition:0.2s;
+    background:var(--amber); color:var(--marine-deep);
+    padding:8px 18px; font-weight:600; font-size:0.85rem; border-radius:4px;
   }
-  .nav-cta:hover{background:#e59b2d;}
 
-  /* Hero */
+  /* Hero Section */
   .hero{
-    position:relative;
     background:var(--marine);
     color:var(--paper);
-    padding:160px 0 130px;
-    overflow:hidden;
-    clip-path:polygon(0 0,100% 0,100% 92%,75% 100%,50% 93%,25% 100%,0 92%);
+    padding:60px 0 70px;
+    text-align:center;
   }
-  .hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background:radial-gradient(ellipse at 78% 30%, rgba(6,167,125,0.35), transparent 55%);
-  }
-  .hero-grid{
-    position:relative;
-    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
-  }
-  .hero-eyebrow{
-    font-size:0.85rem; letter-spacing:0.05em; color:var(--amber); font-weight:600;
-    margin-bottom:18px; text-transform:uppercase;
-  }
-  .hero h1{
-    font-size:3.2rem; max-width:520px; margin-bottom:22px;
-  }
-  .hero h1 em{font-style:italic; color:#8FE3CC; font-weight:500;}
-  .hero p{max-width:440px; color:#C9DEDA; font-size:1.05rem; margin-bottom:32px;}
-  .hero-actions{display:flex; gap:16px; align-items:center;}
+  .hero h1{font-size:2.4rem; margin-bottom:12px; color:var(--white);}
+  .hero p{max-width:550px; margin:0 auto 24px; color:#C9DEDA; font-size:1rem;}
   .btn-primary{
-    background:var(--amber); color:var(--marine-deep); text-decoration:none;
-    padding:15px 28px; border-radius:2px; font-weight:600; font-size:0.95rem; display:inline-block;
-    border:none; cursor:pointer; transition:0.2s;
-  }
-  .btn-primary:hover{background:#e59b2d;}
-  .btn-secondary{
-    background:var(--teal); color:var(--paper); text-decoration:none;
-    padding:10px 18px; border-radius:2px; font-weight:600; font-size:0.88rem; display:inline-block;
-    border:none; cursor:pointer; transition:0.2s;
-  }
-  .btn-secondary:hover{background:#058a67;}
-  .btn-ghost{
-    color:var(--paper); text-decoration:none; font-weight:600; font-size:0.95rem;
-    border-bottom:1px solid rgba(247,250,249,0.5); padding-bottom:4px;
-  }
-  .hero-photo{position:relative;}
-  .hero-photo img{width:100%; height:460px; object-fit:cover; border-radius:3px;}
-  .hero-photo .tag{
-    position:absolute; bottom:-22px; left:-22px;
-    background:var(--paper); color:var(--marine); padding:16px 20px; border-radius:2px;
-    box-shadow:0 12px 30px rgba(5,42,54,0.25);
-    font-size:0.85rem; max-width:190px;
-  }
-  .hero-photo .tag b{display:block; font-family:'Fraunces',serif; font-size:1.5rem; font-weight:600;}
-
-  /* Trust strip */
-  .trust{margin-top:-8px; padding-bottom:70px;}
-  .trust ul{
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;
-    font-size:0.86rem; color:var(--mute); font-weight:500;
-    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-    padding:20px 0;
-  }
-  .trust ul li::before{content:"— "; color:var(--teal);}
-
-  /* Section basics */
-  section{padding:96px 0;}
-  .section-head{max-width:600px; margin-bottom:48px;}
-  .section-head-flex{display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px; margin-bottom:48px;}
-  .section-head-flex .section-head{margin-bottom:0;}
-  .kicker{color:var(--teal); font-weight:600; font-size:0.85rem; margin-bottom:10px; letter-spacing:0.04em; text-transform:uppercase;}
-  .section-head h2{font-size:2.3rem; color:var(--marine);}
-  .section-head .desc{margin-top:12px; color:var(--mute); font-size:1.02rem;}
-
-  /* Representative */
-  .representative{padding:34px 0 24px;}
-  .representative-box{
-    position:relative; min-height:250px; overflow:hidden;
-    background:linear-gradient(135deg,var(--marine-deep),var(--marine));
-    border-radius:6px; color:var(--paper);
-    display:flex; align-items:center; justify-content:space-between;
-    padding:34px 46px 0 42px;
-    box-shadow:0 18px 45px rgba(5,42,54,.14);
-  }
-  .representative-copy{max-width:600px; padding-bottom:32px; position:relative; z-index:2;}
-  .representative-copy .kicker{color:var(--amber); margin-bottom:8px;}
-  .representative-copy h2{font-size:2.05rem; color:var(--paper); margin-bottom:10px;}
-  .representative-copy p{color:#C9DEDA; max-width:510px; font-size:.95rem;}
-  .rep-person{align-self:flex-end; position:relative; min-width:300px; height:275px; display:flex; justify-content:center; align-items:flex-end;}
-  .rep-person::before{
-    content:""; position:absolute; width:220px; height:220px; border-radius:50%;
-    right:20px; bottom:12px; background:rgba(242,169,59,.14);
-    border:2px solid rgba(242,169,59,.7);
-  }
-  .rep-person img{position:relative; z-index:1; height:300px; width:auto; max-width:none; object-fit:contain; filter:drop-shadow(0 12px 18px rgba(0,0,0,.25));}
-  .rep-name{
-    position:absolute; z-index:3; right:28px; bottom:18px;
     background:var(--amber); color:var(--marine-deep);
-    padding:9px 20px; border-radius:2px; font-family:'Fraunces',serif;
-    font-size:1.15rem; font-weight:600; box-shadow:0 8px 20px rgba(0,0,0,.18);
+    padding:12px 24px; border-radius:4px; font-weight:600; font-size:0.9rem;
+    display:inline-block; border:none; cursor:pointer;
   }
 
-  /* Services */
-  .service-row{
-    display:grid; grid-template-columns:70px 1fr 1.3fr; gap:36px; align-items:center;
-    padding:30px 0; border-top:1px solid var(--line);
-  }
-  .services-list .service-row:last-child{border-bottom:1px solid var(--line);}
-  .service-row .big-num{font-size:1.6rem; color:var(--teal);}
-  .service-row h3{font-size:1.35rem; color:var(--ink); font-weight:600;}
-  .service-row p{color:var(--mute); font-size:0.96rem; max-width:420px;}
-  .service-row .thumb{
-    width:100%; height:110px; object-fit:cover; border-radius:3px;
-    justify-self:end; max-width:220px;
-  }
+  /* General Section Layout */
+  section{padding:50px 0; border-bottom:1px solid var(--line);}
+  .section-head{margin-bottom:30px;}
+  .kicker{color:var(--teal); font-weight:600; font-size:0.8rem; letter-spacing:0.05em; text-transform:uppercase;}
+  .section-head h2{font-size:1.8rem; color:var(--marine); margin-top:4px;}
+  .section-head p{color:var(--mute); font-size:0.95rem; margin-top:4px;}
 
-  /* Interactive Gallery Section */
-  .gallery-strip{background:var(--marine); color:var(--paper);}
-  .gallery-strip .kicker{color:var(--amber);}
-  .gallery-strip .section-head h2{color:var(--paper);}
-  .gallery-strip .desc{color:#B9CFCB;}
-  
-  .gallery-filters{display:flex; gap:10px; margin-bottom:28px; flex-wrap:wrap;}
-  .filter-btn{
-    background:rgba(255,255,255,0.08); color:var(--paper); border:1px solid rgba(255,255,255,0.15);
-    padding:8px 18px; font-size:0.85rem; border-radius:30px; cursor:pointer; transition:0.2s;
+  /* Representative Box */
+  .rep-card{
+    background:var(--white); border:1px solid var(--line); border-radius:6px;
+    padding:24px; display:flex; gap:24px; align-items:center; flex-wrap:wrap;
   }
-  .filter-btn.active, .filter-btn:hover{background:var(--amber); color:var(--marine-deep); border-color:var(--amber);}
+  .rep-img-placeholder{
+    width:100px; height:100px; border-radius:50%; background:#E0EAE8;
+    display:flex; align-items:center; justify-content:center; color:var(--mute);
+    font-size:0.8rem; text-align:center; font-weight:600; border:2px dashed var(--teal);
+    overflow:hidden;
+  }
+  .rep-img-placeholder img{width:100%; height:100%; object-fit:cover;}
+  .rep-details h3{color:var(--marine); font-size:1.2rem;}
+  .rep-details p{color:var(--mute); font-size:0.9rem;}
 
-  .gallery-grid-dynamic{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
-    gap:20px;
+  /* Services & Pricing */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px;
+  }
+  .service-box{
+    background:var(--white); border:1px solid var(--line); border-radius:6px; padding:20px;
+  }
+  .service-box h3{font-size:1.1rem; color:var(--marine); margin-bottom:6px;}
+  .service-box p{color:var(--mute); font-size:0.88rem;}
+
+  .pricing-list{
+    background:var(--white); border:1px solid var(--line); border-radius:6px; overflow:hidden;
+  }
+  .price-item{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:16px 20px; border-bottom:1px solid var(--line);
+  }
+  .price-item:last-child{border-bottom:none;}
+  .price-item h4{font-size:1rem; color:var(--ink);}
+  .price-item span{font-weight:700; color:var(--teal); font-size:1.1rem;}
+
+  /* Gallery Section */
+  .gallery-header{display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;}
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:16px;
   }
   .gallery-card{
-    position:relative; height:240px; border-radius:4px; overflow:hidden;
-    background:#041E27; cursor:pointer; group:hover;
+    position:relative; height:180px; background:#E0EAE8; border-radius:6px;
+    overflow:hidden; border:1px dashed #B0C4C0; display:flex; align-items:center; justify-content:center;
   }
-  .gallery-card img{
-    width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease;
-  }
-  .gallery-card:hover img{transform:scale(1.06);}
-  .gallery-overlay{
-    position:absolute; inset:0; background:linear-gradient(to top, rgba(5,42,54,0.9), transparent 60%);
-    display:flex; flex-direction:column; justify-content:flex-end; padding:18px;
-    opacity:0; transition:opacity 0.3s ease;
-  }
-  .gallery-card:hover .gallery-overlay{opacity:1;}
-  .gallery-overlay h4{color:var(--paper); font-size:1rem; font-weight:600;}
-  .gallery-overlay span{color:var(--amber); font-size:0.78rem; text-transform:uppercase;}
+  .gallery-card img{width:100%; height:100%; object-fit:cover;}
+  .empty-msg{color:var(--mute); font-size:0.9rem; text-align:center; grid-column:1/-1; padding:30px 0;}
 
-  /* SEO Articles Section */
-  .articles-section{background:#F0F5F3;}
-  .articles-grid{
-    display:grid; grid-template-columns:repeat(auto-fill, minmax(330px, 1fr)); gap:28px;
+  /* Delete Button */
+  .delete-btn {
+    position:absolute; top:8px; right:8px;
+    background:var(--danger); color:var(--white); border:none;
+    width:26px; height:26px; border-radius:50%; cursor:pointer; z-index:10;
+    font-weight:bold; font-size:13px; display:flex; align-items:center; justify-content:center;
   }
-  .article-card{
-    background:var(--white); border:1px solid var(--line); border-radius:4px;
-    overflow:hidden; display:flex; flex-direction:column; transition:transform 0.2s, box-shadow 0.2s;
+
+  /* Simple Articles Section */
+  .articles-list{display:flex; flex-direction:column; gap:12px;}
+  .article-item{
+    background:var(--white); border:1px solid var(--line); border-radius:6px; padding:16px 20px; position:relative;
   }
-  .article-card:hover{transform:translateY(-4px); box-shadow:0 12px 30px rgba(0,0,0,0.06);}
-  .article-card img{height:200px; width:100%; object-fit:cover;}
-  .article-content{padding:24px; display:flex; flex-direction:column; flex-grow:1;}
-  .article-meta{display:flex; justify-content:space-between; font-size:0.78rem; color:var(--teal); font-weight:600; text-transform:uppercase; margin-bottom:10px;}
-  .article-title{font-size:1.25rem; color:var(--marine); margin-bottom:12px; font-weight:600;}
-  .article-excerpt{color:var(--mute); font-size:0.92rem; margin-bottom:18px; flex-grow:1;}
-  .article-link{color:var(--marine-deep); font-weight:600; font-size:0.88rem; text-decoration:none; display:inline-flex; align-items:center; gap:6px;}
-  .article-link:hover{color:var(--teal);}
+  .article-item h3{font-size:1.05rem; color:var(--marine); margin-bottom:4px;}
+  .article-item p{color:var(--mute); font-size:0.88rem;}
 
-  /* Pricing */
-  .rate-card{border:1px solid var(--line); border-radius:3px; overflow:hidden;}
-  .rate-row{display:grid; grid-template-columns:2fr repeat(3, 1fr); border-top:1px solid var(--line);}
-  .rate-row:first-child{border-top:none;}
-  .rate-row > div{padding:18px 22px; font-size:0.92rem;}
-  .rate-row.head{background:var(--marine); color:var(--paper); font-family:'Fraunces',serif; font-weight:600;}
-  .rate-row.head > div:nth-child(3){background:rgba(255,255,255,0.06);}
-  .rate-row:not(.head) > div:nth-child(3){background:#EEF6F3; font-weight:600;}
-  .rate-row:not(.head) > div:first-child{color:var(--ink); font-weight:500;}
-  .rate-row:not(.head) > div:not(:first-child){color:var(--mute); text-align:center;}
-  .rate-row.price-row > div{font-family:'Fraunces',serif; font-size:1.3rem; color:var(--marine); text-align:center; font-weight:600;}
-  .rate-row.price-row > div:first-child{text-align:left; font-family:'Inter',sans-serif; font-size:0.85rem; color:var(--mute); font-weight:600;}
-  .rate-foot{display:flex; justify-content:space-between; align-items:center; padding:20px 22px; background:var(--paper); flex-wrap:wrap; gap:14px;}
-  .rate-foot span{font-size:0.88rem; color:var(--mute);}
+  /* FAQ Accordion */
+  .faq-item{padding:12px 0; border-bottom:1px solid var(--line);}
+  .faq-item summary{font-weight:600; color:var(--marine); cursor:pointer;}
+  .faq-item p{margin-top:6px; color:var(--mute); font-size:0.9rem;}
 
-  /* Testimonials & Contact */
-  .quotes{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
-  .quote{border-left:2px solid var(--teal); padding-left:24px;}
-  .quote p{font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; color:var(--ink); margin-bottom:14px;}
-  .quote span{font-size:0.85rem; color:var(--mute); font-weight:600;}
-
-  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
-  .contact-list li{padding:18px 0; border-top:1px solid var(--line); font-size:0.96rem;}
-  .contact-list li:first-child{border-top:none;}
-  .contact-list b{display:block; color:var(--teal); font-size:0.78rem; letter-spacing:0.03em; text-transform:uppercase; margin-bottom:4px;}
-  form label{display:block; font-size:0.82rem; font-weight:600; margin-bottom:6px; color:var(--marine); margin-top:18px;}
-  form label:first-child{margin-top:0;}
-  form input, form select, form textarea{
-    width:100%; padding:10px 2px; border:none; border-bottom:1px solid var(--line);
-    background:transparent; font-family:inherit; font-size:0.98rem; color:var(--ink);
+  /* Floating WhatsApp */
+  .whatsapp-float{
+    position:fixed; bottom:20px; right:20px; background:#25D366; color:white;
+    padding:10px 18px; border-radius:50px; font-weight:600; box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    z-index:99; font-size:0.88rem;
   }
-  form input:focus, form select:focus, form textarea:focus{outline:none; border-bottom-color:var(--teal);}
-  form button{margin-top:30px; padding:14px 30px; border:none; border-radius:2px; background:var(--marine); color:var(--paper); font-weight:600; cursor:pointer; font-size:0.95rem;}
 
-  /* Modals for Dynamic Uploads */
+  /* Modal */
   .modal{
-    position:fixed; inset:0; background:rgba(5,42,54,0.85); backdrop-filter:blur(4px);
-    display:none; align-items:center; justify-content:center; z-index:100; padding:20px;
+    position:fixed; inset:0; background:rgba(0,0,0,0.6);
+    display:none; align-items:center; justify-content:center; z-index:100; padding:15px;
   }
   .modal.active{display:flex;}
   .modal-box{
-    background:var(--white); padding:36px; border-radius:6px; max-width:550px; width:100%;
-    max-height:90vh; overflow-y:auto; box-shadow:0 20px 50px rgba(0,0,0,0.3); position:relative;
+    background:var(--white); padding:24px; border-radius:6px; max-width:450px; width:100%; position:relative;
   }
-  .modal-close{position:absolute; top:18px; right:20px; font-size:1.5rem; cursor:pointer; color:var(--mute);}
-  .modal-box h3{font-size:1.5rem; color:var(--marine); margin-bottom:20px;}
-
-  /* Lightbox */
-  .lightbox-modal{
-    position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:110;
-    display:none; align-items:center; justify-content:center; flex-direction:column; padding:20px;
+  .modal-close{position:absolute; top:12px; right:16px; font-size:1.3rem; cursor:pointer;}
+  form label{display:block; font-size:0.8rem; font-weight:600; margin-top:12px; color:var(--marine);}
+  form input, form textarea{
+    width:100%; padding:8px; border:1px solid var(--line); border-radius:4px; font-size:0.9rem; margin-top:4px;
   }
-  .lightbox-modal.active{display:flex;}
-  .lightbox-modal img{max-width:90%; max-height:80vh; object-fit:contain; border-radius:4px;}
-  .lightbox-caption{color:var(--paper); margin-top:14px; font-size:1rem;}
+  form button{margin-top:18px; width:100%;}
 
-  footer{background:var(--marine-deep); color:#9FB6B1; padding:34px 0; font-size:0.85rem;}
-  .footer-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;}
-  .footer-row a{text-decoration:none; color:#9FB6B1;}
+  footer{background:var(--marine-deep); color:#9FB6B1; padding:24px 0; text-align:center; font-size:0.85rem;}
 
-  @media (max-width:880px){
-    header{position:static; background:var(--marine); padding:20px 0;}
-    .hero{padding-top:40px;}
+  @media(max-width:600px){
     .nav-links{display:none;}
-    .hero-grid{grid-template-columns:1fr;}
-    .representative-box{padding:30px 24px 0; min-height:260px;}
-    .representative-copy{padding-bottom:28px;}
-    .representative-copy h2{font-size:1.65rem;}
-    .rep-person{min-width:240px; height:255px;}
-    .rep-person img{height:275px;}
-    .rep-person::before{width:190px; height:190px; right:8px;}
-    .rep-name{right:8px; bottom:12px; font-size:1rem; padding:8px 14px;}
-    .hero-photo{order:-1;}
-    .hero h1{font-size:2.3rem;}
-    .trust ul{flex-direction:column;}
-    .service-row{grid-template-columns:40px 1fr; grid-template-areas:"num title" "num desc";}
-    .service-row .thumb{display:none;}
-    .rate-row{grid-template-columns:1.5fr repeat(3,1fr); font-size:0.78rem;}
-    .rate-row > div{padding:12px 10px;}
-    .quotes{grid-template-columns:1fr;}
-    .contact-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:1.8rem;}
   }
 </style>
-
-<!-- SEO Structured Data (JSON-LD) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AutoWash",
-  "name": "Shine Point Car Wash",
-  "image": "https://loremflickr.com/700/600/carwash?lock=11",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Main Boulevard, near Liberty Roundabout",
-    "addressLocality": "Lahore",
-    "addressCountry": "PK"
-  },
-  "telephone": "+923001234567",
-  "openingHours": "Mo-Su 09:00-21:00",
-  "priceRange": "Rs 500 - Rs 2,500"
-}
-</script>
 </head>
 <body>
 
@@ -352,435 +190,287 @@
     <div class="brand">Shine<em>Point</em></div>
     <nav class="nav-links">
       <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#articles">Articles &amp; SEO</a>
       <a href="#pricing">Pricing</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#articles">Articles</a>
+      <a href="#faqs">FAQs</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="#contact">Book a wash</a>
+    <a class="nav-cta" href="#contact">Book Now</a>
   </div>
 </header>
 
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="hero-eyebrow">LAHORE'S NEIGHBOURHOOD CAR WASH</p>
-      <h1>A properly clean car, <em>not a rushed one.</em></h1>
-      <p>Hand wash, foam wash and interior detailing done by people who check the corners. No shortcuts, no upselling — just a clean car and a fair price.</p>
-      <div class="hero-actions">
-        <a class="btn-primary" href="#pricing">See pricing</a>
-        <a class="btn-ghost" href="#contact">Book a slot →</a>
+  <div class="wrap">
+    <h1>Shine Point Car Wash</h1>
+    <p>Foam wash, interior cleaning, aur polishing ki fast services. Apni car chamkayen aasan rates par.</p>
+    <a class="btn-primary" href="#contact">Book a Slot</a>
+  </div>
+</section>
+
+<!-- Representative Section -->
+<section>
+  <div class="wrap">
+    <div class="rep-card">
+      <div class="rep-img-placeholder">
+        <img src="mubashir-ali.png" alt="Mubashir Ali" onerror="this.style.display='none'; this.parentElement.innerText='Your Photo';">
       </div>
-    </div>
-    <div class="hero-photo">
-      <img src="https://loremflickr.com/700/600/carwash?lock=11" alt="Car being hand washed with foam at Shine Point Car Wash Lahore">
-      <div class="tag"><b>500+</b>cars washed every month</div>
+      <div class="rep-details">
+        <p class="kicker">Representative</p>
+        <h3>Mubashir Ali</h3>
+        <p>Car wash booking aur enquiry ke liye rabta karein.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="wrap trust">
-  <ul>
-    <li>Foam &amp; microfiber — no scratches</li>
-    <li>Interior + exterior in one visit</li>
-    <li>Fixed, upfront pricing</li>
-    <li>Open daily, 9am – 9pm</li>
-  </ul>
-</div>
-
-<div class="representative">
-  <div class="wrap">
-    <div class="representative-box">
-      <div class="representative-copy">
-        <p class="kicker">YOUR REPRESENTATIVE</p>
-        <h2>Meet the person behind your visit</h2>
-        <p>For bookings, questions and service guidance, our representative is here to help you choose the right car care service.</p>
-      </div>
-      <div class="rep-person">
-        <img src="mubashir-ali.png" alt="Mubashir Ali, Shine Point representative">
-        <div class="rep-name">Mubashir Ali</div>
-      </div>
-    </div>
-  </div>
-</div>
-
+<!-- Services Section -->
 <section id="services">
   <div class="wrap">
     <div class="section-head">
-      <p class="kicker">SERVICES</p>
-      <h2>Pick what your car needs</h2>
-      <p class="desc">From a quick rinse before work to a full interior refresh before a trip — four services cover most of what people ask for.</p>
+      <p class="kicker">Our Services</p>
+      <h2>Services Jo Hum Offer Karte Hain</h2>
     </div>
-    <div class="services-list">
-      <div class="service-row">
-        <div class="big-num">01</div>
-        <div>
-          <h3>Basic Wash</h3>
-          <p>Exterior shampoo, rinse and hand dry. Good for a weekly clean-up.</p>
-        </div>
-        <img class="thumb" src="https://loremflickr.com/440/220/car-wash-water?lock=31" alt="Exterior car wash rinse">
+    <div class="services-grid">
+      <div class="service-box">
+        <h3>Basic Wash</h3>
+        <p>Gadi ki bahar se shampoo washing aur hand drying.</p>
       </div>
-      <div class="service-row">
-        <div class="big-num">02</div>
-        <div>
-          <h3>Foam Wash</h3>
-          <p>A thick foam soak lifts dirt before hand washing — gentler on the paint.</p>
-        </div>
-        <img class="thumb" src="https://loremflickr.com/440/220/carwash?lock=32" alt="Car covered in thick foam wash">
+      <div class="service-box">
+        <h3>Foam Wash</h3>
+        <p>Thick foam soak se gadi ka saaf aur safe wash.</p>
       </div>
-      <div class="service-row">
-        <div class="big-num">03</div>
-        <div>
-          <h3>Interior Detailing</h3>
-          <p>Vacuum, seat and dash cleaning, mats washed, glass polished inside.</p>
-        </div>
-        <img class="thumb" src="https://loremflickr.com/440/220/car-interior?lock=33" alt="Car interior being vacuumed and cleaned">
+      <div class="service-box">
+        <h3>Interior Cleaning</h3>
+        <p>Seats, mats aur dashboard ki Mukammal vacuuming aur cleaning.</p>
       </div>
-      <div class="service-row">
-        <div class="big-num">04</div>
-        <div>
-          <h3>Wax &amp; Polish</h3>
-          <p>Restores shine and adds a protective layer that helps dust slide off.</p>
-        </div>
-        <img class="thumb" src="https://loremflickr.com/440/220/car-polish?lock=34" alt="Car being polished and waxed">
+      <div class="service-box">
+        <h3>Wax & Polish</h3>
+        <p>Car ki body ke liye protective layer aur shine polish.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ==================== DYNAMIC GALLERY SECTION ==================== -->
-<section class="gallery-strip" id="gallery">
-  <div class="wrap">
-    <div class="section-head-flex">
-      <div class="section-head">
-        <p class="kicker">GALLERY &amp; SHOWCASE</p>
-        <h2>A look at our recent work</h2>
-        <p class="desc">Filter photos or upload new images directly to practice image SEO and Alt tag optimization.</p>
-      </div>
-      <button class="btn-primary" onclick="openModal('galleryModal')">+ Upload Image</button>
-    </div>
-
-    <!-- Gallery Category Filters -->
-    <div class="gallery-filters">
-      <button class="filter-btn active" onclick="filterGallery('all')">All Shots</button>
-      <button class="filter-btn" onclick="filterGallery('foam')">Foam Wash</button>
-      <button class="filter-btn" onclick="filterGallery('interior')">Interior</button>
-      <button class="filter-btn" onclick="filterGallery('polish')">Wax &amp; Polish</button>
-    </div>
-
-    <!-- Gallery Grid -->
-    <div class="gallery-grid-dynamic" id="galleryContainer">
-      <!-- Generated dynamically by JS -->
-    </div>
-  </div>
-</section>
-
-<!-- ==================== SEO ARTICLES SECTION ==================== -->
-<section id="articles" class="articles-section">
-  <div class="wrap">
-    <div class="section-head-flex">
-      <div class="section-head">
-        <p class="kicker">SEO &amp; CAR CARE GUIDES</p>
-        <h2>Articles &amp; Maintenance Tips</h2>
-        <p class="desc">Publish keyword-rich blog posts to practice on-page SEO techniques and search console optimizations.</p>
-      </div>
-      <button class="btn-primary" onclick="openModal('articleModal')">+ Add Article</button>
-    </div>
-
-    <!-- Articles Container Grid -->
-    <div class="articles-grid" id="articlesContainer">
-      <!-- Generated dynamically by JS -->
-    </div>
-  </div>
-</section>
-
+<!-- Pricing Section -->
 <section id="pricing">
   <div class="wrap">
     <div class="section-head">
-      <p class="kicker">PRICING</p>
-      <h2>Simple, fixed rates</h2>
-      <p class="desc">One price per service, no hidden add-ons. Sedan pricing shown — SUVs and vans add a small fee, confirmed before we start.</p>
+      <p class="kicker">Simple Rates</p>
+      <h2>Service Prices</h2>
     </div>
-    <div class="rate-card">
-      <div class="rate-row head">
-        <div>What's included</div>
-        <div style="text-align:center">Basic</div>
-        <div style="text-align:center">Foam + Interior</div>
-        <div style="text-align:center">Full Detail</div>
+    <div class="pricing-list">
+      <div class="price-item">
+        <div>
+          <h4>Basic Wash</h4>
+          <p style="font-size:0.8rem; color:var(--mute);">Exterior Wash + Dry</p>
+        </div>
+        <span>Rs 500</span>
       </div>
-      <div class="rate-row">
-        <div>Exterior shampoo &amp; rinse</div>
-        <div>✓</div><div>✓</div><div>✓</div>
+      <div class="price-item">
+        <div>
+          <h4>Foam Wash + Interior</h4>
+          <p style="font-size:0.8rem; color:var(--mute);">Foam Soak + Complete Vacuum</p>
+        </div>
+        <span>Rs 1,200</span>
       </div>
-      <div class="rate-row">
-        <div>Foam soak &amp; hand wash</div>
-        <div>—</div><div>✓</div><div>✓</div>
+      <div class="price-item">
+        <div>
+          <h4>Full Detailing Package</h4>
+          <p style="font-size:0.8rem; color:var(--mute);">Foam Wash + Interior + Polish</p>
+        </div>
+        <span>Rs 2,500</span>
       </div>
-      <div class="rate-row">
-        <div>Full interior vacuum &amp; wipe-down</div>
-        <div>—</div><div>✓</div><div>✓</div>
-      </div>
-      <div class="rate-row">
-        <div>Wax, polish &amp; leather conditioning</div>
-        <div>—</div><div>—</div><div>✓</div>
-      </div>
-      <div class="rate-row price-row">
-        <div>Price (sedan)</div>
-        <div>Rs 500</div><div>Rs 1,200</div><div>Rs 2,500</div>
-      </div>
-    </div>
-    <div class="rate-foot">
-      <span>SUV / van: +Rs 300 &nbsp;·&nbsp; Estimated time: 20–60 min depending on service</span>
-      <a class="btn-primary" href="#contact">Book a slot</a>
     </div>
   </div>
 </section>
 
-<section>
+<!-- Gallery Section -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="gallery-header">
+      <div>
+        <p class="kicker">Photos</p>
+        <h2 style="color:var(--marine); font-size:1.5rem;">Car Wash Gallery</h2>
+      </div>
+      <button class="btn-primary" onclick="openModal('galleryModal')">+ Add Photo</button>
+    </div>
+    <div class="gallery-grid" id="galleryContainer">
+      <!-- Uploaded images will appear here -->
+    </div>
+  </div>
+</section>
+
+<!-- Simple Articles Section -->
+<section id="articles">
+  <div class="wrap">
+    <div class="gallery-header">
+      <div>
+        <p class="kicker">Articles</p>
+        <h2 style="color:var(--marine); font-size:1.5rem;">Information & Tips</h2>
+      </div>
+      <button class="btn-primary" onclick="openModal('articleModal')">+ Add Article</button>
+    </div>
+    <div class="articles-list" id="articlesContainer">
+      <!-- Simple articles will appear here -->
+    </div>
+  </div>
+</section>
+
+<!-- FAQs Section -->
+<section id="faqs">
   <div class="wrap">
     <div class="section-head">
-      <p class="kicker">FROM CUSTOMERS</p>
-      <h2>What people say after</h2>
+      <p class="kicker">FAQs</p>
+      <h2>Aam Sawalat</h2>
     </div>
-    <div class="quotes">
-      <div class="quote">
-        <p>"They actually clean under the mats and around the door edges. First wash that's felt properly done."</p>
-        <span>— Ahmed R., regular customer</span>
-      </div>
-      <div class="quote">
-        <p>"In and out in half an hour before work, and the price never changes from what they quote."</p>
-        <span>— Sana K., regular customer</span>
-      </div>
+    <div>
+      <details class="faq-item">
+        <summary>Car wash mein kitna waqt lagta hai?</summary>
+        <p>Normal wash mein 20-30 minutes lagte hain.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Kya booking karwana zaroori hai?</summary>
+        <p>Aap direct bhi aa sakte hain, lekin booking se waqt ki bachat hoti hai.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<section id="contact" style="background:#EFF6F4;">
-  <div class="wrap contact-grid">
-    <div>
-      <div class="section-head">
-        <p class="kicker">VISIT OR CALL</p>
-        <h2>Come by, or book ahead</h2>
-      </div>
-      <ul class="contact-list">
-        <li><b>Address</b>Main Boulevard, near Liberty Roundabout, Lahore</li>
-        <li><b>Phone</b>0300 1234567</li>
-        <li><b>Hours</b>Every day, 9:00 AM – 9:00 PM</li>
-      </ul>
+<!-- Contact Section -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">Contact Us</p>
+      <h2>Rabta Karein</h2>
     </div>
-    <form onsubmit="event.preventDefault(); alert('Booking request sent successfully!');">
-      <label for="name">Name</label>
-      <input id="name" type="text" placeholder="Your name" required>
-      <label for="phone">Phone</label>
-      <input id="phone" type="tel" placeholder="03XX XXXXXXX" required>
-      <label for="service">Service</label>
-      <select id="service">
-        <option>Basic Wash</option>
-        <option>Foam + Interior</option>
-        <option>Full Detail</option>
-      </select>
-      <label for="time">Preferred time</label>
-      <input id="time" type="text" placeholder="e.g. Today, 5pm">
-      <button type="submit">Request booking</button>
-    </form>
+    <p><b>Location:</b> Main Boulevard, Liberty Roundabout, Lahore</p>
+    <p><b>Phone / WhatsApp:</b> 0300 1234567</p>
+    <p><b>Timings:</b> Daily 9:00 AM – 9:00 PM</p>
   </div>
 </section>
+
+<a href="https://wa.me/923001234567" target="_blank" class="whatsapp-float">
+  💬 WhatsApp Chat
+</a>
 
 <footer>
-  <div class="wrap footer-row">
-    <span>© 2026 Shine Point Car Wash, Lahore</span>
-    <a href="#contact">Get directions</a>
+  <div class="wrap">
+    © 2026 Shine Point Car Wash. All rights reserved.
   </div>
 </footer>
 
-<!-- ==================== MODALS FOR UPLOADING ==================== -->
-
-<!-- Modal 1: Add Image -->
+<!-- Modals -->
 <div class="modal" id="galleryModal">
   <div class="modal-box">
     <span class="modal-close" onclick="closeModal('galleryModal')">&times;</span>
-    <h3>Add Image to Gallery</h3>
-    <form id="imageForm" onsubmit="handleImageUpload(event)">
-      <label>Image URL / Source</label>
-      <input type="url" id="imgUrl" placeholder="https://images.unsplash.com/..." required>
-      
-      <label>Image Caption Title</label>
-      <input type="text" id="imgTitle" placeholder="e.g. Deep Foam Soak" required>
-
-      <label>SEO Alt Text (Important for SEO)</label>
-      <input type="text" id="imgAlt" placeholder="e.g. Red sedan receiving thick foam wash" required>
-
-      <label>Category Tag</label>
-      <select id="imgCategory">
-        <option value="foam">Foam Wash</option>
-        <option value="interior">Interior</option>
-        <option value="polish">Wax &amp; Polish</option>
-      </select>
-
-      <button type="submit" style="width:100%;">Upload Image</button>
+    <h3 style="color:var(--marine);">Add Image</h3>
+    <form onsubmit="handleImageUpload(event)">
+      <label>Image URL / Path</label>
+      <input type="text" id="imgUrl" placeholder="Image ka link ya path enter karein" required>
+      <label>Alt Text / Description</label>
+      <input type="text" id="imgAlt" placeholder="e.g. Car Wash Photo" required>
+      <button type="submit" class="btn-primary">Save Image</button>
     </form>
   </div>
 </div>
 
-<!-- Modal 2: Add Article -->
 <div class="modal" id="articleModal">
   <div class="modal-box">
     <span class="modal-close" onclick="closeModal('articleModal')">&times;</span>
-    <h3>Publish SEO Article</h3>
-    <form id="articleForm" onsubmit="handleArticleUpload(event)">
-      <label>Article Title (H1 / H2 Target)</label>
-      <input type="text" id="artTitle" placeholder="e.g. How Often Should You Foam Wash Your Car in Lahore?" required>
-
-      <label>Category / Target Keyword</label>
-      <input type="text" id="artCategory" placeholder="e.g. Car Maintenance" required>
-
-      <label>Featured Image URL</label>
-      <input type="url" id="artImg" placeholder="https://images.unsplash.com/..." required>
-
-      <label>Short Excerpt (Meta Description style)</label>
-      <input type="text" id="artExcerpt" placeholder="Quick 2-line summary for SEO snippet preview..." required>
-
-      <label>Article Content (HTML supported)</label>
-      <textarea id="artBody" rows="5" placeholder="Write full article content here..." required></textarea>
-
-      <button type="submit" style="width:100%;">Publish Article</button>
+    <h3 style="color:var(--marine);">Add Article</h3>
+    <form onsubmit="handleArticleUpload(event)">
+      <label>Title</label>
+      <input type="text" id="artTitle" placeholder="Article Title" required>
+      <label>Details / Short Text</label>
+      <textarea id="artExcerpt" rows="3" placeholder="Article details..." required></textarea>
+      <button type="submit" class="btn-primary">Save Article</button>
     </form>
   </div>
 </div>
 
-<!-- Lightbox Modal -->
-<div class="lightbox-modal" id="lightboxModal" onclick="closeModal('lightboxModal')">
-  <img id="lightboxImg" src="" alt="Full view">
-  <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
-
-<!-- ==================== JAVASCRIPT LOGIC ==================== -->
 <script>
-  // Initial Data for Gallery
-  let defaultGallery = [
-    { id: 1, title: 'Exterior Foam Wash', cat: 'foam', url: 'https://loremflickr.com/700/760/carwash?lock=21', alt: 'Worker foam washing a car exterior' },
-    { id: 2, title: 'Precision Detailing', cat: 'polish', url: 'https://loremflickr.com/500/380/car-detailing?lock=22', alt: 'Close-up of car exterior detailing' },
-    { id: 3, title: 'Vacuum & Leather Polish', cat: 'interior', url: 'https://loremflickr.com/500/380/car-interior?lock=23', alt: 'Car interior being cleaned' },
-    { id: 4, title: 'Gloss Protection Wax', cat: 'polish', url: 'https://loremflickr.com/500/380/car-polish?lock=24', alt: 'Car being polished and waxed' }
-  ];
+  let galleryData = JSON.parse(localStorage.getItem('sp_gallery')) || [];
+  let articleData = JSON.parse(localStorage.getItem('sp_articles')) || [];
 
-  // Initial Data for Articles (SEO Practice)
-  let defaultArticles = [
-    {
-      id: 1,
-      title: '5 Reasons Why Foam Wash Protects Your Car Paint in Summer',
-      category: 'Car Maintenance',
-      date: 'Sep 10, 2026',
-      img: 'https://loremflickr.com/600/400/carwash?lock=88',
-      excerpt: 'Discover why standard washing causes micro-scratches and how thick foam pre-soak preserves high-gloss clear coats in hot weather.'
-    },
-    {
-      id: 2,
-      title: 'Complete Guide to Interior Detailing: Dust & Odor Removal',
-      category: 'Detailing Guide',
-      date: 'Aug 28, 2026',
-      img: 'https://loremflickr.com/600/400/car-interior?lock=89',
-      excerpt: 'Interior air quality matters. Here is our step-by-step process to deep vacuum seats, clean air vents, and condition leather upholstery.'
-    }
-  ];
-
-  // Load from LocalStorage or Set Default
-  let galleryData = JSON.parse(localStorage.getItem('sp_gallery')) || defaultGallery;
-  let articleData = JSON.parse(localStorage.getItem('sp_articles')) || defaultArticles;
-
-  // Render Functions
-  function renderGallery(items) {
+  function renderGallery() {
     const container = document.getElementById('galleryContainer');
-    container.innerHTML = items.map(item => `
-      <div class="gallery-card" onclick="openLightbox('${item.url}', '${item.title} - ${item.alt}')">
+    if (galleryData.length === 0) {
+      container.innerHTML = `<div class="empty-msg">Abhi koi picture nahi hai. "+ Add Photo" par click karke apni pics add karein.</div>`;
+      return;
+    }
+    container.innerHTML = galleryData.map(item => `
+      <div class="gallery-card">
+        <button class="delete-btn" onclick="deleteImage(${item.id})">✕</button>
         <img src="${item.url}" alt="${item.alt}">
-        <div class="gallery-overlay">
-          <span>${item.cat}</span>
-          <h4>${item.title}</h4>
-        </div>
       </div>
     `).join('');
   }
 
   function renderArticles() {
     const container = document.getElementById('articlesContainer');
+    if (articleData.length === 0) {
+      container.innerHTML = `<div class="empty-msg">Abhi koi article nahi hai. "+ Add Article" par click karke add karein.</div>`;
+      return;
+    }
     container.innerHTML = articleData.map(item => `
-      <article class="article-card">
-        <img src="${item.img}" alt="${item.title}">
-        <div class="article-content">
-          <div class="article-meta">
-            <span>${item.category}</span>
-            <span>${item.date}</span>
-          </div>
-          <h3 class="article-title">${item.title}</h3>
-          <p class="article-excerpt">${item.excerpt}</p>
-          <a href="#articles" class="article-link" onclick="alert('Article Full View: ${item.title}')">Read Full Article →</a>
-        </div>
-      </article>
+      <div class="article-item">
+        <button class="delete-btn" onclick="deleteArticle(${item.id})">✕</button>
+        <h3>${item.title}</h3>
+        <p>${item.excerpt}</p>
+      </div>
     `).join('');
   }
 
-  // Filter Gallery
-  function filterGallery(category) {
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    
-    if (category === 'all') {
-      renderGallery(galleryData);
-    } else {
-      const filtered = galleryData.filter(item => item.cat === category);
-      renderGallery(filtered);
+  function deleteImage(id) {
+    if (confirm("Kya aap is image ko delete karna chahte hain?")) {
+      galleryData = galleryData.filter(item => item.id !== id);
+      localStorage.setItem('sp_gallery', JSON.stringify(galleryData));
+      renderGallery();
     }
   }
 
-  // Upload Handlers
+  function deleteArticle(id) {
+    if (confirm("Kya aap is article ko delete karna chahte hain?")) {
+      articleData = articleData.filter(item => item.id !== id);
+      localStorage.setItem('sp_articles', JSON.stringify(articleData));
+      renderArticles();
+    }
+  }
+
   function handleImageUpload(e) {
     e.preventDefault();
     const newImg = {
       id: Date.now(),
       url: document.getElementById('imgUrl').value,
-      title: document.getElementById('imgTitle').value,
-      alt: document.getElementById('imgAlt').value,
-      cat: document.getElementById('imgCategory').value
+      alt: document.getElementById('imgAlt').value
     };
     galleryData.unshift(newImg);
     localStorage.setItem('sp_gallery', JSON.stringify(galleryData));
-    renderGallery(galleryData);
+    renderGallery();
     closeModal('galleryModal');
-    document.getElementById('imageForm').reset();
+    e.target.reset();
   }
 
   function handleArticleUpload(e) {
     e.preventDefault();
-    const today = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     const newArt = {
       id: Date.now(),
       title: document.getElementById('artTitle').value,
-      category: document.getElementById('artCategory').value,
-      img: document.getElementById('artImg').value,
-      excerpt: document.getElementById('artExcerpt').value,
-      date: today
+      excerpt: document.getElementById('artExcerpt').value
     };
     articleData.unshift(newArt);
     localStorage.setItem('sp_articles', JSON.stringify(articleData));
     renderArticles();
     closeModal('articleModal');
-    document.getElementById('articleForm').reset();
+    e.target.reset();
   }
 
-  // Modal Controls
   function openModal(id) { document.getElementById(id).classList.add('active'); }
   function closeModal(id) { document.getElementById(id).classList.remove('active'); }
 
-  function openLightbox(url, title) {
-    document.getElementById('lightboxImg').src = url;
-    document.getElementById('lightboxCaption').innerText = title;
-    openModal('lightboxModal');
-  }
-
-  // Initial Initialization
   window.onload = function() {
-    renderGallery(galleryData);
+    renderGallery();
     renderArticles();
   };
 </script>
