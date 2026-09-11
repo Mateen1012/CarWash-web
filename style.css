@@ -467,6 +467,22 @@
       font-weight: bold;
       transition: var(--transition);
       backdrop-filter: blur(4px);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .gallery-card:hover .delete-btn,
+    .article-card:hover .delete-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Touch devices (phones/tablets) don't have hover, so always show the button there */
+    @media (hover: none) {
+      .delete-btn {
+        opacity: 1;
+        pointer-events: auto;
+      }
     }
 
     .delete-btn:hover { background: #dc2626; }
